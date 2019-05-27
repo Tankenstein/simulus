@@ -1,9 +1,11 @@
 {
   "name": "simulus",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "main": "dist/main.js",
   "types": "dist/index.d.ts",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "dependencies": {
     "@juggle/resize-observer": "^1.3.0",
     "@types/jest": "24.0.11",
@@ -41,7 +43,7 @@
     "build": "webpack && tsc",
     "build-into-example": "rm -rf example/node_modules/simulus && npm run build && mkdir example/node_modules/simulus && mkdir example/node_modules/simulus/dist && cp -r dist/* example/node_modules/simulus/dist && cp package.json example/node_modules/simulus",
     "build-docs": "typedoc --out build/tsdoc src/simulus",
-    "predeploy": "pushd example && npm run build && popd && npm run build-docs",
+    "predeploy": "pushd example && npm run build && popd",
     "prepare": "npm run build",
     "deploy": "gh-pages -d example/build"
   },

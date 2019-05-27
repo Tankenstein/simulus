@@ -24,7 +24,6 @@ hospitals:
 patients: 50
 criticality: 3
 radius: 0.005
-
 */
 
 const moduleId = 'com.ukutammet.ambusim.v1';

@@ -1,4 +1,5 @@
 import { Module } from './module';
+import { Scenario } from './scenario';
 
 /**
  * What type of router to use for your simulus instance
@@ -37,4 +38,11 @@ export interface Options {
    * @default []
    */
   modules?: Module[];
+
+  /**
+   * You can package some preloaded scenarios with your instance if you want to.
+   *
+   * @default []
+   */
+  preloadedScenarios?: Scenario[];
 }

@@ -65,3 +65,15 @@ export async function create({ name, moduleIds }: ScenarioParams): Promise<Scena
   await table.add(scenario);
   return scenario;
 }
+
+/**
+ * Save an entire scenario into the repository if it is not already there
+ * @param scenario Scenario to save
+ */
+export async function saveIfDoesNotExist(scenario: Scenario): Promise<Scenario> {
+  const existingInstance = await findById(scenario.id);
+  if (!existingInstance) {
+    await table.add(scenario);
+  }
+  return scenario;
+}

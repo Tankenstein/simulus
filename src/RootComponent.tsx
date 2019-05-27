@@ -1,9 +1,10 @@
-import React, { StrictMode, useMemo } from 'react';
+import React, { StrictMode, useMemo, useEffect } from 'react';
 import { MemoryRouter } from 'react-router';
 import { HashRouter, BrowserRouter } from 'react-router-dom';
 
 import { Options, RouterType } from './options';
 import { Provider as ModuleProvider } from './module';
+import { ScenarioRepository } from './scenario';
 import App from './app';
 import { keyBy } from './utils';
 
@@ -14,6 +15,11 @@ import { keyBy } from './utils';
 const RootComponent = ({ options }: { options: Options }) => {
   const Router = getRouterInstanceForType(options.routerType);
   const modules = useMemo(() => keyBy(options.modules, 'id'), [options.modules]);
+  useEffect(() => {
+    if (options.preloadedScenarios) {
+      options.preloadedScenarios.forEach(ScenarioRepository.saveIfDoesNotExist);
+    }
+  }, [options.preloadedScenarios]);
   return (
     <StrictMode>
       <ModuleProvider value={modules}>

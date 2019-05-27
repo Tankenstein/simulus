@@ -1,0 +1,61 @@
+{
+  "id": "8bd0894f-3b80-40f1-8b21-c9b30ef130a2",
+  "name": "Example simple scenario",
+  "createdAt": "2019-05-27T19:32:55.010Z",
+  "moduleIds": [
+    "com.ukutammet.ambusim.v1"
+  ],
+  "entities": [
+    {
+      "id": "51e6e140-93ba-4575-a62c-366b542ce5a7",
+      "typeId": "com.ukutammet.ambusim.v1.ambulance",
+      "name": "Ambulance 1",
+      "archived": false
+    }
+  ],
+  "worldStates": [
+    {
+      "id": "a0e325a6-e33f-4909-a241-42902f8b30f8",
+      "createdAt": "2019-05-27T19:33:45.862Z",
+      "previousWorldStateId": null,
+      "entityStates": {
+        "51e6e140-93ba-4575-a62c-366b542ce5a7": {
+          "entityId": "51e6e140-93ba-4575-a62c-366b542ce5a7",
+          "properties": {
+            "location": {
+              "typeId": "location",
+              "value": {
+                "x": 59.427546,
+                "y": 24.756372
+              }
+            }
+          }
+        }
+      }
+    }
+  ],
+  "indicatorIds": [
+    "com.ukutammet.ambusim.v1.indicator.worldMap",
+    "com.ukutammet.ambusim.v1.indicator.deadPatients"
+  ],
+  "indicatorLayout": [
+    {
+      "w": 2,
+      "h": 3,
+      "x": 0,
+      "y": 0,
+      "i": "0",
+      "moved": false,
+      "static": false
+    },
+    {
+      "w": 1,
+      "h": 1,
+      "x": 2,
+      "y": 0,
+      "i": "1",
+      "moved": false,
+      "static": false
+    }
+  ]
+}
