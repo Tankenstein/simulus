@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/simulus/precache-manifest.b850f2fee0fd356be916bb99aa97357d.js"
+  "/simulus/precache-manifest.f07cba2f71e74dd00e5a76fb154545d2.js"
 );
 
 self.addEventListener('message', (event) => {
