@@ -8,6 +8,8 @@ Simulus has been built as part of a master's thesis project. It provides common 
 
 To build an application using simulus, one has to either acquire or implement simulus modules to actually provide models and model behaviour in your specific crisis simulation.
 
+To see an example of a simulus application, check out [the example application](https://tankenstein.github.io/simulus). The source code can be found in the example directory in this repo.
+
 ## Installing
 
 Either through npm:
